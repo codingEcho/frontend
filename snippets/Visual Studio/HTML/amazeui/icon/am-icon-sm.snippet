@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-icon-sm</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-icon-sm</Description>
+      <Shortcut>am-icon-sm</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>icon</ID>
+          <ToolTip>icon name</ToolTip>
+          <Default>home</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>text</ID>
+          <ToolTip>icon text</ToolTip>
+          <Default>字体图标</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <span class="am-icon-$icon$ am-icon-sm">$text$</span>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

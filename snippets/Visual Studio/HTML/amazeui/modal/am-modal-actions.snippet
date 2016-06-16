@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-modal-actions</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-modal-actions</Description>
+      <Shortcut>am-modal-actions</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>modal target</ToolTip>
+          <Default>my-actions</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>列表内容</ToolTip>
+          <Default>列表内容</Default>
+        </Literal>
+        <Literal>
+          <ID>icon1</ID>
+          <ToolTip>icon name</ToolTip>
+          <Default>wechat</Default>
+        </Literal>
+        <Literal>
+          <ID>text1</ID>
+          <ToolTip>icon text</ToolTip>
+          <Default>wechat 标题</Default>
+        </Literal>
+      <Literal>
+          <ID>icon2</ID>
+          <ToolTip>icon name</ToolTip>
+          <Default>mobile</Default>
+        </Literal>
+        <Literal>
+          <ID>text2</ID>
+          <ToolTip>icon text</ToolTip>
+          <Default>mobile 标题</Default>
+        </Literal>
+        <Literal>
+          <ID>button</ID>
+          <ToolTip>button text</ToolTip>
+          <Default>取消</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <!-- 触发 button -->
+        <button class="am-btn am-btn-secondary" data-am-modal="{target: '#$target$'}">actions</button>
+        <div class="am-modal-actions" id="$target$">
+          <div class="am-modal-actions-group">
+            <ul class="am-list">
+              <li class="am-modal-actions-header"></li>
+              <li><a href="#"><span class="am-icon-$icon1$"></span>$text1$</a></li>
+              <li><a href="#"><i class="am-icon-$icon2$"></i>$text2$</a></li>
+              <li class="am-modal-actions-danger">
+                <a href="#">
+                   <i class="am-icon-twitter"></i>witter 标题 
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="am-modal-actions-group">
+            <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>$button$</button>
+          </div>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

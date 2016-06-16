@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-alert-success</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI JavaScript Plugin Alert Success</Description>
+      <Shortcut>am-alert-success</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>tip</ID>
+          <ToolTip>Alert Content</ToolTip>
+          <Default>没什么可给你，但求凭这阙歌。谢谢你风雨里，都不退愿陪着我。</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div class="am-alert am-alert-success" data-am-alert>
+          <button type="button" class="am-close">&times;</button>
+          <p>$tip$</p>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

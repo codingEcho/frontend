@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-offcanvas</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-offcanvas</Description>
+      <Shortcut>am-offcanvas</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>target id</ToolTip>
+          <Default>your-id</Default>
+        </Literal>
+        <Literal>
+          <ID>button</ID>
+          <ToolTip>button content</ToolTip>
+          <Default>点击显示侧边栏</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>侧边栏的内容</ToolTip>
+          <Default>列表</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <!-- 按钮触发器 -->
+        <button class="am-btn am-btn-primary" data-am-offcanvas="{target: '#$your-id$'}">$button$</button>
+        <!-- 侧边栏内容 -->
+        <div id="$your-id$" class="am-offcanvas">
+          <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content">
+            <!-- 你的内容 -->
+            $content$
+            </div>
+          </div>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

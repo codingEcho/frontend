@@ -1,0 +1,33 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>hasOwnProperty</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>hasop</Shortcut>
+    <Description>Object prototype hasOwnProperty</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>object</ID>
+        <ToolTip>遍历的对象</ToolTip>
+        <Default>obj</Default>
+      </Literal>
+      <Literal>
+        <ID>key</ID>
+        <ToolTip>属性名</ToolTip>
+        <Default>key</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+    if (Object.prototype.hasOwnProperty.call($object$,$key$)){
+      $end$
+    }
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

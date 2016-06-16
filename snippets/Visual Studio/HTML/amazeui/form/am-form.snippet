@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-form</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-form</Description>
+      <Shortcut>am-form</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>action</ID>
+          <ToolTip>form action</ToolTip>
+          <Default>action</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>frorm title</ToolTip>
+          <Default>表单标题</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>label</ID>
+          <ToolTip>label desc</ToolTip>
+          <Default>姓名</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>placeholder</ID>
+          <ToolTip>placeholder</ToolTip>
+          <Default>输入你的姓名</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>submit</ID>
+          <ToolTip>submit content</ToolTip>
+          <Default>提交</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <form action="$action$" method="POST" role="form" class="am-form">
+          <legend>$title$</legend>
+          <div class="am-form-group">
+            <label for="">$label$</label>
+            <input type="text" id="" placeholder="$placeholder$">
+          </div>
+          <button type="submit" class="am-btn am-btn-primary">$submit$}</button>
+        </form>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

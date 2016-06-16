@@ -1,0 +1,45 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>hshcallback</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>hshcallback</Shortcut>
+    <Description>惠生活项目的JavaScript回调函数模板</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>APP</ID>
+        <ToolTip>JavaScript APP的名称</ToolTip>
+        <Default>MyAPP</Default>
+      </Literal>
+      <Literal>
+        <ID>handler</ID>
+        <ToolTip>回调函数名称</ToolTip>
+        <Default>loadListHandler</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+  <![CDATA[
+    $APP$.$handler$ = function (result) {
+        if (result) {
+            var data;
+            if (result.code && result.code === '0') {
+                result.data && (data = result.data);
+                if (data) {
+                    // do something
+                    $end$
+                }
+            } else {
+                console && console.error(result.msg);
+            }
+        } else {
+            throw 'no response from server';
+        }
+    };            
+]]></Code>
+  </Snippet>
+</CodeSnippet>

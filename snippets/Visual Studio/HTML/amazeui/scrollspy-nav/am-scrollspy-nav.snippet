@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-scrollspy-nav</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-scrollspy-nav</Description>
+      <Shortcut>am-scrollspy-nav</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>target id</ToolTip>
+          <Default>ititle</Default>
+        </Literal>
+        <Literal>
+          <ID>title</ID>
+          <ToolTip>title</ToolTip>
+          <Default>标题</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>content</ToolTip>
+          <Default>侦测滚动</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <nav class="scrollspy-nav" data-am-scrollspy-nav data-am-sticky>
+          <ul>
+            <li><a href="#$target$">$title$</a></li>
+          </ul>
+        </nav>
+        <div id="$target$">
+          $content$
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

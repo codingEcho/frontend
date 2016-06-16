@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-grid-9</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-grid-9</Description>
+      <Shortcut>am-grid-9</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>sm</ID>
+          <ToolTip>sm</ToolTip>
+          <Default>1</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>md</ID>
+          <ToolTip>md</ToolTip>
+          <Default>2</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>lg</ID>
+          <ToolTip>lg</ToolTip>
+          <Default>3</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>content</ID>
+          <ToolTip>content</ToolTip>
+          <Default>内容</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div class="am-g am-g-9">
+          <div class="am-u-sm-$sm$ am-u-md-$md$ am-u-lg-$lg$">
+            $content$
+          </div>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

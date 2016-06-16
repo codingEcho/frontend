@@ -1,0 +1,88 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>javascript pattern module</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspmodule</Shortcut>
+    <Description>JavaScript模式模块模式</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>appname</ID>
+        <ToolTip>应用名称</ToolTip>
+        <Default>MYAPP</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /* JavaScript对象创建模式-模块模式*/
+        /* 通用的namespace函数 */
+        $appname$.namespace = function (nsString) {
+            var parts = nsString.split("."),
+                parent = $appname$,
+                i;
+            /* 剥离最前面的冗余全局变量 */
+            if (parts[0] === "$appname$") {
+                parts = parts.slice(1);
+            }
+
+            for (i = 0; i < parts.length; i++) {
+                /* 如果不存在就创建一个属性 */
+                if (typeof parent[parts[i]] === "undefined") {
+                    parent[parts[i]] = {};
+                }
+                parent = parent[parts[i]];
+            }
+            return parent;
+        };
+
+        /* 1.建立命名空间 */
+        $appname$.namespace("$appname$.utilities.array");
+
+        /* 2.定义模块 */
+        $appname$.utilities.arry = (function () {
+            return {
+                // todo
+            };
+        }());
+
+        //3.向公共接口添加一些方法
+        $appname$.utilities.array = (function () {
+            // 依赖
+            var uobj = $appname$.utilities.object,
+                ulang = $appname$.utilities.lang,
+                // 私有属性
+                arrayString = "[object Array]",
+                ops = Object.prototype.toLocaleString;
+
+            /* 在这里可以定义您的私有方法私有方法*/
+            // your private method
+            
+            /* var变量定义结束 */
+
+            /* 可选的一次性初始化过程 */
+            // your init code
+
+            /* 公有API */
+            return {
+                inArray: function (neddle, haystack) {
+                    for (var i = 0, max = haystack.length; i < max; i++) {
+                        if (haystack[i] === neddle) {
+                            return true;
+                        }
+                    }
+                },
+                isArray: function (a) {
+                    return ops.call(a) === arrayString;
+                }
+                /* 这里添加更多的方法和属性 */
+            }
+        }());
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

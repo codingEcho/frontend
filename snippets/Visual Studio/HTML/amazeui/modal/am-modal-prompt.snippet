@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-modal-prompt</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-modal-prompt</Description>
+      <Shortcut>am-modal-prompt</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>modal target</ToolTip>
+          <Default>my-prompt</Default>
+        </Literal>
+        <Literal>
+          <ID>title</ID>
+          <ToolTip>标题</ToolTip>
+          <Default>Amaze prompt</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <button class="am-btn am-btn-secondary" data-am-modal="{target: '#$target$'}">Prompt</button>
+        <div class="am-modal am-modal-prompt" tabindex="-1" id="$target$">
+            <div class="am-modal-dialog">
+                <div class="am-modal-hd">Amaze UI</div>
+                <div class="am-modal-bd">
+                    来来来，吐槽点啥吧
+                    <input type="text" class="am-modal-prompt-input">
+                </div>
+                <div class="am-modal-footer">
+                    <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                    <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+                </div>
+            </div>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

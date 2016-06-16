@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-modal-actions</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-modal-actions</Description>
+      <Shortcut>am-modal-actions</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>modal target</ToolTip>
+          <Default>my-modal-loading</Default>
+        </Literal>
+        <Literal>
+          <ID>loadcontent</ID>
+          <ToolTip>load content</ToolTip>
+          <Default>正在载入...</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+ <!-- 触发 button -->
+<button class="am-btn am-btn-secondary" data-am-modal="{target: '#$target$'}">loading</button>
+<div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="$target$">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">$loadcontent$</div>
+    <div class="am-modal-bd">
+      <span class="am-icon-spinner am-icon-spin"></span>
+    </div>
+  </div>
+</div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

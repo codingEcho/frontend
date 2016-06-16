@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-comment</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-comment</Description>
+      <Shortcut>am-comment</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>author</ID>
+          <ToolTip>author</ToolTip>
+          <Default>评论者1</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>posttime</ID>
+          <ToolTip>post time</ToolTip>
+          <Default>评论于</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>comment</ID>
+          <ToolTip>评论内容</ToolTip>
+          <Default>评论内容</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+<article class="am-comment"> <!-- 评论容器 -->
+  <a href="">
+    <img class="am-comment-avatar" alt=""/> <!-- 评论者头像 -->
+  </a>
+  <div class="am-comment-main"> <!-- 评论内容容器 -->
+    <header class="am-comment-hd">
+      <!--<h3 class="am-comment-title">评论标题</h3>-->
+      <div class="am-comment-meta"> <!-- 评论元数据 -->
+        <a href="#link-to-user" class="am-comment-author">$author$</a> <!-- 评论者 -->
+        $posttime<time datetime=""></time>
+      </div>
+    </header>
+    <div class="am-comment-bd">$comment$</div> <!-- 评论内容 -->
+  </div>
+</article>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

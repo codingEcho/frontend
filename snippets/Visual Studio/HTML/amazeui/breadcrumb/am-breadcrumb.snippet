@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-breadcrumb</Title>
+      <Author>Mingqing Luo</Author>
+      <Description>Amaze UI CSS am-breadcrumb</Description>
+      <Shortcut>am-breadcrumb</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>lv1</ID>
+          <ToolTip>根节点</ToolTip>
+          <Default>首页</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>lv2</ID>
+          <ToolTip>二级子节点</ToolTip>
+          <Default>分类</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>content</ID>
+          <ToolTip>content</ToolTip>
+          <Default>内容</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <ol class="am-breadcrumb">
+          <li><a href="#">$lv1$</a></li>
+          <li><a href="#">$lv2$</a></li>
+          <li class="am-active">$content$</li>
+        </ol>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

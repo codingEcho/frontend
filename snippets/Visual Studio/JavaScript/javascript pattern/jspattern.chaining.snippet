@@ -1,0 +1,50 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>JavaScript pattern chaining</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspchaining</Shortcut>
+    <Description>JavaScript 链模式</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>chainobj</ID>
+        <ToolTip>链对象</ToolTip>
+        <Default>chainobj</Default>
+      </Literal>
+      <Literal>
+        <ID>method1</ID>
+        <ToolTip>对象方法1</ToolTip>
+        <Default>increment</Default>
+      </Literal>
+      <Literal>
+        <ID>method2</ID>
+        <ToolTip>对象方法2</ToolTip>
+        <Default>add</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+       /*JavaScript对象创建模式  链模式*/
+        var $chainobj$ = {
+            value: 1,
+            $method1$: function () {
+                this.value += 1;
+                return this;
+            },
+            $method2$: function (v) {
+                this.value += v;
+                return this;
+            }
+        };
+        /* 链方法调用示例 */
+        //$chainobj$.$method1$().$method2$(10).$method2$(10).$method1$();
+       $end$
+    ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

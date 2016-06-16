@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-table</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-table</Description>
+      <Shortcut>am-table</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>title1</ID>
+          <ToolTip>title of first tab</ToolTip>
+          <Default>标题title</Default>
+        </Literal>
+        <Literal>
+          <ID>title2</ID>
+          <ToolTip>title of second tab</ToolTip>
+          <Default>标题2</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <ToolTip>content of first tab</ToolTip>
+          <Default>内容 in tab1</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <ToolTip>content of first tab</ToolTip>
+          <Default>内容 in tab2</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div class="am-tabs" data-am-tabs>
+          <ul class="am-tabs-nav am-nav am-nav-tabs">
+            <li class="am-active"><a href="#tab1">$title1$</a></li>
+            <li><a href="#tab2">$title2$</a></li>
+          </ul>
+
+          <div class="am-tabs-bd">
+            <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+              $content1$
+            </div>
+            <div class="am-tab-panel am-fade" id="tab2">
+              $content2$
+            </div>
+          </div>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

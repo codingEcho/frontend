@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-collapse</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-collapse</Description>
+      <Shortcut>am-collapse</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>target</ID>
+          <ToolTip>target</ToolTip>
+          <Default>collapse-nav</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>menu</ID>
+          <ToolTip>Menu</ToolTip>
+          <Default>Menu</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>title</ToolTip>
+          <Default>标题</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>active</ID>
+          <ToolTip>active</ToolTip>
+          <Default>active 标题</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <!-- 折叠菜单效果 -->
+        <button class="am-btn am-btn-primary" data-am-collapse="{target: '#$target$'}">$menu$ <i class="am-icon-bars"></i></button>
+        <nav>
+          <ul id="$target$" class="am-nav am-collapse">
+            <li><a href="">$title$</a></li>
+            <li class="am-active"><a href="">$active$</a></li>
+          </ul>
+        </nav>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

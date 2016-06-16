@@ -1,0 +1,48 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>javascript pattern namespace</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspnamespace</Shortcut>
+    <Description>JavaScript 命名空间模式</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>appname</ID>
+        <ToolTip>应用名称</ToolTip>
+        <Default>MYAPP</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /*JavaScript 命名空间模式*/
+        var $appname$ = $appname$ || {};
+        $appname$.namespace = function (nsString) {
+            var parts = nsString.split("."),
+                parent = $appname$,
+                i;
+            /* 剥离最前面的冗余全局变量 */
+            if (parts[0] === "$appname$") {
+                parts = parts.slice(1);
+            }
+
+            for (i = 0; i < parts.length; i++) {
+                /* 如果不存在就创建一个属性 */
+                if (typeof parent[parts[i]] === "undefined") {
+                    parent[parts[i]] = {};
+                }
+                parent = parent[parts[i]];
+            }
+            return parent;
+        };
+
+        // var module2 = $appname$.namespace( "$appname$.modules.module2");
+        $end$
+]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

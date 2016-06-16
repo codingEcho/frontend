@@ -1,0 +1,77 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>initswitch</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>initswitch</Shortcut>
+    <Description>初始化时分支模板代码片段</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>interface</ID>
+        <ToolTip>接口</ToolTip>
+        <Default>utils</Default>
+      </Literal>
+      <Literal>
+        <ID>method1</ID>
+        <ToolTip>接口方法1</ToolTip>
+        <Default>addListener</Default>
+      </Literal>
+      <Literal>
+        <ID>method2</ID>
+        <ToolTip>接口方法2</ToolTip>
+        <Default>removeListener</Default>
+      </Literal>
+      <Literal>
+        <ID>expression1</ID>
+        <ToolTip>分支表达式1</ToolTip>
+        <Default>typeof window.addEventListener === "function"</Default>
+      </Literal>
+      <Literal>
+        <ID>expression2</ID>
+        <ToolTip>分支表达式2</ToolTip>
+        <Default>typeof document.attachEvent === "function"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+  <![CDATA[
+// 定义接口
+var $interface$ = {
+    $method1$: null,
+    $method2$: null
+};
+// 实现
+if ( typeof window.addEventListener === "function") {
+    /*utils.addListener = function (el, type, fn) {
+        el.addEventListener(type, fn, false);
+    };
+    utils.removeListener = function (el, type, fn) {
+        el.removeEventListener(type, fn, false);
+    };*/
+}
+else if ( typeof document.attachEvent === "function") {
+   
+   /*//IE 11已经摒弃了attachEvent(这里只做演示用)
+    utils.addListener = function (el, type, fn) {
+        el.attachEvent( "on" + type, fn);
+    };
+    utils.removeListener = function (el, type, fn) {
+        el.detachEvent( "on" + type, fn);
+    }*/
+}
+else {
+    /*utils.addListener = function (el, type, fn) {
+        el["on" + type] = fn;
+    };
+    utils.removeListener = function (el, type, fn) {
+        el["on" + type] = null;
+    }*/
+   $end$
+}
+]]></Code>
+  </Snippet>
+</CodeSnippet>

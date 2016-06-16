@@ -1,0 +1,30 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>realtimefunction</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>realtimefunction</Shortcut>
+    <Description>JavaScript即时函数</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /* JavaScript即时函数 */
+        /* 即时函数 */
+        (function () {
+           /*在这里定义你的变量和方法以保持洁净的全局作用域*/
+           // your code here
+        }());
+
+        // 带参数的即时函数
+        (function (global) {
+            /* 函数块内通过global访问全局变量 */
+        }(this/*参数为全局变量*/));
+        $end$
+      ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

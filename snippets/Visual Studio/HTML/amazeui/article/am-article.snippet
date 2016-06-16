@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-article</Title>
+      <Author>Mingqing Luo</Author>
+      <Description>Amaze UI CSS am-article</Description>
+      <Shortcut>am-article</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>title</ToolTip>
+          <Default>title</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>meta</ID>
+          <ToolTip>meta</ToolTip>
+          <Default>meta</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>lead</ID>
+          <ToolTip>lead</ToolTip>
+          <Default>lead</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>content</ID>
+          <ToolTip>content</ToolTip>
+          <Default>content</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <article class="am-article">
+          <div class="am-article-hd">
+            <h1 class="am-article-title">$title$</h1>
+            <p class="am-article-meta">$meta$</p>
+          </div>
+          <div class="am-article-bd">
+            <p class="am-article-lead">$lead$</p>
+            $content$
+          </div>
+        </article>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

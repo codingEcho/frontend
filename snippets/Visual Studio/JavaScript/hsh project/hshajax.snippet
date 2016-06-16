@@ -1,0 +1,52 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>hshajax</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>hshajax</Shortcut>
+    <Description>惠生活项目的jQuey AJAX 请求模板</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>jQuery</ID>
+        <ToolTip>jQuery</ToolTip>
+        <Default>$</Default>
+      </Literal>
+      <Literal>
+        <ID>requestpath</ID>
+        <ToolTip>request path</ToolTip>
+        <Default>BASEVAR.MOBILEHSH</Default>
+      </Literal>
+      <Literal>
+        <ID>action</ID>
+        <ToolTip>action的名称</ToolTip>
+        <Default>deliveryadd_add</Default>
+      </Literal>
+      <Literal>
+        <ID>paramname</ID>
+        <ToolTip>请求的参数的名称</ToolTip>
+        <Default>deliveryadd_add</Default>
+      </Literal>
+      <Literal>
+        <ID>paramvalue</ID>
+        <ToolTip>请求的参数的值</ToolTip>
+        <Default>JSON.stringify(address)</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+  <![CDATA[
+    $jQuery$.ajax({
+        type: 'POST',
+        url: BASEVAR.HostContextPath+$path$ + '$action$.action',
+        data: { $paramname$: $paramvalue$ },
+        dataType: 'json',
+        success: handler
+    });        
+    $end$
+]]></Code>
+  </Snippet>
+</CodeSnippet>

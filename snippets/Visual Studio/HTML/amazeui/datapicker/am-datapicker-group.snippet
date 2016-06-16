@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-datapicker-group</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-datapicker-group</Description>
+      <Shortcut>am-datapicker-group</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>placeholder</ID>
+          <ToolTip>placeholder</ToolTip>
+          <Default>日历组件</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div class="am-input-group am-datepicker-date" data-am-datepicker>
+          <input type="text" class="am-form-field" placeholder="$placeholder$" readonly>
+          <span class="am-input-group-btn am-datepicker-add-on">
+            <button class="am-btn am-btn-default" type="button"><span class="am-icon-calendar"></span> </button>
+          </span>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

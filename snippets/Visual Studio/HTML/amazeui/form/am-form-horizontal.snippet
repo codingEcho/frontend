@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-form-horizontal</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI Form am-form-horizontal</Description>
+      <Shortcut>am-form-horizontal</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>action</ID>
+          <ToolTip>form action</ToolTip>
+          <Default>action</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>labelw</ID>
+          <ToolTip>label width</ToolTip>
+          <Default>2</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>label title</ToolTip>
+          <Default>电子邮件</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>placeholder</ID>
+          <ToolTip>placeholder</ToolTip>
+          <Default>输入你的电子邮件</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>inputw</ID>
+          <ToolTip>input width</ToolTip>
+          <Default>disabled li</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>submit</ID>
+          <ToolTip>submit content</ToolTip>
+          <Default>提交登入</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <form action="$action$" method="POST" role="form" class="am-form am-form-horizontal">
+          <!-- form 结合 grid 使用 -->
+          <div class="am-form-group">
+            <label for="" class="am-u-sm-$labelw$ am-form-label">$title$</label>
+            <div class="am-u-sm-10">
+              <input type="email" id="" placeholder="$placeholder$" />
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <div class="am-u-sm-$inputw$ am-u-sm-offset-$labelw$">
+              <button type="submit" class="am-btn am-btn-default">$submit$</button>
+            </div>
+          </div>
+        </form>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

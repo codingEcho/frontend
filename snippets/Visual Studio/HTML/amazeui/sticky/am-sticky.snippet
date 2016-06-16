@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-sticky</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-sticky</Description>
+      <Shortcut>am-sticky</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>top</ID>
+          <ToolTip>距离顶部位置(默认为0)</ToolTip>
+          <Default>80</Default>
+        </Literal>
+          <Literal>
+          <ID>animation</ID>
+          <ToolTip>动画名称</ToolTip>
+          <Default>slide-top</Default>
+        </Literal>
+            <Literal>
+          <ID>bottom</ID>
+          <ToolTip>距离底部小于该数值时不再往下滚动，避免覆盖下面的元素（数值或返回数值的函数）</ToolTip>
+          <Default>200</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div data-am-sticky="{top:$top$,animation: '$animation$',bottom:$bottom$}">
+          <button class="am-btn am-btn-primary">Stick 80px below the top</button>
+        </div
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

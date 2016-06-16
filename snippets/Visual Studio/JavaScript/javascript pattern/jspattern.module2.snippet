@@ -1,0 +1,80 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>JavaScript Pattern module2</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspmodule2</Shortcut>
+    <Description>JavaScript对象创建模式 揭示模块模式</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>appname</ID>
+        <ToolTip>需要创建的对象</ToolTip>
+        <Default>MYAPP</Default>
+      </Literal>
+      <Literal>
+        <ID>method1</ID>
+        <ToolTip>对象方法1</ToolTip>
+        <Default>isArray</Default>
+      </Literal>
+      <Literal>
+        <ID>method2</ID>
+        <ToolTip>对象方法2</ToolTip>
+        <Default>indexOf</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /* JavaScript对象创建模式 揭示模块模式 */
+               $appname$.namespace = function (nsString) {
+            var parts = nsString.split("."),
+                parent = $appname$,
+                i;
+            /* 剥离最前面的冗余全局变量 */
+            if (parts[0] === "$appname$") {
+                parts = parts.slice(1);
+            }
+
+            for (i = 0; i < parts.length; i++) {
+                /* 如果不存在就创建一个属性 */
+                if (typeof parent[parts[i]] === "undefined") {
+                    parent[parts[i]] = {};
+                }
+                parent = parent[parts[i]];
+            }
+            return parent;
+        };
+
+        $appname$.utilities.array = (function () {
+            //私有属性
+            var arrayString = "[object Array]",
+                ops = Object.prototype.toString,
+                //私有方法
+                $method1$ = function (haystack, needle) {
+                    for (var i = 0, max = haystack.length; i < max; i++) {
+                        if (haystack[i] === needle) {
+                            return i;
+                        }
+                    }
+                    return -1;
+                },
+                $method2$ = function (a) {
+                    return ops.call(a) === arrayString;
+                };
+               //var变量定义结束
+
+            /* 在下面揭示公有API */
+            return {
+                $method1$: $method1$,
+                $method2$: $method2$
+            }
+        }());
+        $end$
+    ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

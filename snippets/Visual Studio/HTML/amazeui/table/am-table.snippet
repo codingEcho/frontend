@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-table</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-table</Description>
+      <Shortcut>am-table</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>opclass</ID>
+          <ToolTip>可选class</ToolTip>
+          <Default> am-table-hover</Default>
+        </Literal>
+        <Literal>
+          <ID>th</ID>
+          <ToolTip>table header</ToolTip>
+          <Default>表格标题</Default>
+        </Literal>
+        <Literal>
+          <ID>content1</ID>
+          <ToolTip>demo 1</ToolTip>
+          <Default>表格内容1</Default>
+        </Literal>
+        <Literal>
+          <ID>content2</ID>
+          <ToolTip>demo 2</ToolTip>
+          <Default>active 表格内容</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <table class="am-table$opclass$">
+          <thead>
+            <tr>
+              <th>$th$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$content1$</td>
+            </tr>
+            <tr class="am-active">
+              <td>$content2$</td>
+            </tr>
+          </tbody>
+        </table>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

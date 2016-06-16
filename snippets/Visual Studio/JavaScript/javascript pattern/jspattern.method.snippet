@@ -1,0 +1,63 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>JavaScript Pattern method() method</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspmethod</Shortcut>
+    <Description>JavaScript对象创建模式 method()方法</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>iobject</ID>
+        <ToolTip>需要创建的对象</ToolTip>
+        <Default>Person</Default>
+      </Literal>
+      <Literal>
+        <ID>method1</ID>
+        <ToolTip>对象方法1</ToolTip>
+        <Default>getName</Default>
+      </Literal>
+      <Literal>
+        <ID>method2</ID>
+        <ToolTip>对象方法2</ToolTip>
+        <Default>setName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /* JavaScript对象创建模式 method()方法 */
+        MYAPP.utilities.array = (function () {
+        //私有属性
+    var arrayString = "[object Array]",
+        ops = Object.prototype.toString,
+        //私有方法
+        inArray = function (haystack, needle) {
+            for ( var i = 0, max = haystack.length; i < max; i++) {
+                if (haystack[i] === needle) {
+                    return i;
+                }
+            }
+            return -1;
+        },
+        isArray = function (a) {
+            return ops.call(a) === arrayString;
+        };
+    //var变量定义结束
+
+    //揭示公有API
+    return {
+        isArray: isArray,
+        indexOf: inArray
+    }
+}());
+
+
+        
+    ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

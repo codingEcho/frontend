@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-modal-confirm</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-modal-confirm</Description>
+      <Shortcut>am-modal-confirm</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>target</ID>
+          <ToolTip>modal target</ToolTip>
+          <Default>my-actions</Default>
+        </Literal>
+        <Literal>
+          <ID>title</ID>
+          <ToolTip>confirm title</ToolTip>
+          <Default>confirm title</Default>
+        </Literal>
+        <Literal>
+          <ID>content</ID>
+          <ToolTip>confirm content</ToolTip>
+          <Default>confirm content</Default>
+        </Literal>
+
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <!-- 触发 button -->
+<button class="am-btn am-btn-secondary" data-am-modal="{target: '#$target$'}">confirm</button>
+<div class="am-modal am-modal-confirm" tabindex="-1" id="$target$">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">$title$</div>
+    <div class="am-modal-bd">
+      $content$
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

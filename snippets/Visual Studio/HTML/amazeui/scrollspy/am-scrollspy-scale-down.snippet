@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-scrollspy-scale-down</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-scrollspy-scale-down</Description>
+      <Shortcut>am-scrollspy-scale-down</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>option</ID>
+          <ToolTip>more option</ToolTip>
+          <Default>, delay: 3000, repeat: false</Default>
+        </Literal>
+        <Literal>
+          <ID>conent</ID>
+          <ToolTip>content text</ToolTip>
+          <Default>内容</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div data-am-scrollspy="'{animation: 'scale-down'$option$'}">
+          $conent$
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

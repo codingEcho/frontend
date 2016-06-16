@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-dropdown-up</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-dropdown-up</Description>
+      <Shortcut>am-dropdown-up</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>button</ID>
+          <ToolTip>dropdown button</ToolTip>
+          <Default>上拉列表</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>title</ID>
+          <ToolTip>title</ToolTip>
+          <Default>标题</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>li</ID>
+          <ToolTip>li</ToolTip>
+          <Default>li</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>active</ID>
+          <ToolTip>active li</ToolTip>
+          <Default>active li</Default>
+          
+          
+        </Literal>
+        <Literal Editable="true">
+          <ID>disabled</ID>
+          <ToolTip>disabled li</ToolTip>
+          <Default>disabled li</Default>
+          
+          
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <div class="am-dropdown am-dropdown-up" data-am-dropdown>
+          <button class="am-btn am-btn-danger am-dropdown-toggle" data-am-dropdown-toggle>$button$<span class="am-icon-caret-up"></span></button>
+          <ul class="am-dropdown-up">
+            <li class="am-dropdown-header">$title$</li>
+            <li><a href="#">$li$</a></li>
+            <li class="am-active"><a href="#">$active$</a></li>
+            <li class="am-disabled"><a href="#">$disabled$</a></li>
+            <li class="am-divider"></li>
+          </ul>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

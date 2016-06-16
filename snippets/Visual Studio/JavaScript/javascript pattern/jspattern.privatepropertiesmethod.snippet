@@ -1,0 +1,67 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>javascript pattern private properties and method</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>jspprivatepm</Shortcut>
+    <Description>初始化时分支模板代码片段</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>object</ID>
+        <ToolTip>全局变量</ToolTip>
+        <Default>myArray</Default>
+      </Literal>
+      
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /*JavaScript对象创建模式 私有变量和私有方法*/
+        var $object$;
+        (function () {
+            /* 私有属性 */
+            var astr = "[object Array]";
+            /* 私有方法 */
+            function isArray(a) {
+                return toString.call(a) === astr;
+            }
+            
+            function indexOf(hayStack, needle) {
+                var i = 0,
+                    max = hayStack.length;
+                for (; i < max; i++) {
+                    if (hayStack[i] === needle) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+            /* 将私有方法揭示为公共方法 */
+            $object$ = {
+                isArray: isArray,
+                indexOf: indexOf,
+                inArray: indexOf
+            };
+        }());
+        
+        /*[使用示例]
+        $object$.isArray([1, 2]);
+        $object$.isArray({ 0: 1 });
+        $object$.indexOf(["a", "b", "c"], "c");
+        $object$.inArray(["a", "b", "c"], "c");
+        */
+        
+        /*公共方法$object$.indexOf()发生意外不会影响私有方法indexOf()
+        $object$.indexOf = null;
+        $object$.inArray(["a", "b", "c"], "c"); // 2
+        */
+         $end$
+
+    ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

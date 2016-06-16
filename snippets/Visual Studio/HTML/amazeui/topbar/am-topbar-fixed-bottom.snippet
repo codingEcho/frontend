@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.4.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>am-thumbnail</Title>
+      <Author>Minqing Luo</Author>
+      <Description>Amaze UI CSS am-thumbnail</Description>
+      <Shortcut>am-thumbnail</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>title</ID>
+          <ToolTip>title of image</ToolTip>
+          <Default>图片标题</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="html">
+        <![CDATA[
+        <!-- 能结合 Grid、AVG Grid 使用 -->
+        <div class="am-thumbnail">
+          <img src="" alt=""/>
+          <h3 class="am-thumbnail-caption">$title$</h3>
+        </div>
+        $end$
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

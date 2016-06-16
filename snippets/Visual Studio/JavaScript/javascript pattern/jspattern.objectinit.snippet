@@ -1,0 +1,54 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>objectinit</Title>
+    <Author>Luo Minqing</Author>
+    <Shortcut>objectinit</Shortcut>
+    <Description>JavaScript即时对象初始化</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>property1</ID>
+        <ToolTip>即时对象属性1</ToolTip>
+        <Default>maxheight</Default>
+      </Literal>
+      <Literal>
+        <ID>property2</ID>
+        <ToolTip>即时对象属性2</ToolTip>
+        <Default>maxwidth</Default>
+      </Literal>
+      <Literal>
+        <ID>method</ID>
+        <ToolTip>即时对象的方法</ToolTip>
+        <Default>gimmeMax</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+      <![CDATA[
+        /* JavaScript即时对象初始化 */
+        /* 即时对象初始化 */
+        ({
+            /*
+              在这里可以定义设定值(又称为配置常数)
+            */
+            $property1$: 600,
+            $property2$: 400,
+            /* 还可以定义一些实用的方法 */
+            $method$: function () {
+                return this.$property1$ + "x" + $property2$;
+            },
+            /* 完成所有初始化工作 */
+            init: function () {
+                this.$method$();
+                /*更多初始化任务*/
+            }
+        }).init(); // 调用对象的init()方法完成对象初始化     
+        $end$
+    ]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
